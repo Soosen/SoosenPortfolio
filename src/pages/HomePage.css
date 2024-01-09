@@ -1,0 +1,12 @@
+.Page {
+  height: 100%;
+  width: 100;
+  background: aqua;
+}
+
+.MainSection {
+  height: 92%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,8 @@
+.NavButton {
+  width: 33%;
+  background: black;
+  border: none;
+  color: #206bcc;
+  font-size: 200%;
+  font-weight: bold;
+}

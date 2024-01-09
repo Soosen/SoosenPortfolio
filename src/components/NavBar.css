@@ -1,0 +1,31 @@
+.NavBar {
+  height: 8%;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.Logo {
+  color: white;
+  font-size: 200%;
+  height: 100%;
+  width: 30%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding-left: 3%;
+}
+
+.LogoRight {
+  color: #206bcc;
+}
+
+.NavButtonsContainer {
+  width: 35%;
+  height: 100%;
+  float: right;
+  display: flex;
+  justify-content: space-evenly;
+}
