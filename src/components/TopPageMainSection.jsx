@@ -1,8 +1,10 @@
 import GenericButton from "./GenericButton";
 import "./TopPageMainSecion.css";
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function TopPageMainSecion() {
+  const navigate = useNavigate();
   return (
     <div className="FullPageView">
       <div className="MainSectionContainer">
@@ -27,12 +29,20 @@ function TopPageMainSecion() {
           <GenericButton
             className="GenButton"
             name="Contact me"
+            onClick={() => navigate(`/Contact`)}
           ></GenericButton>
           <GenericButton
             className="GenButton"
             name="Download CV"
+            onClick={() => navigate(`/Resume`)}
           ></GenericButton>
-          <GenericButton className="GenButton" name="GitHub"></GenericButton>
+          <GenericButton
+            className="GenButton"
+            name="GitHub"
+            onClick={() => {
+              window.open("https://github.com/Soosen", "_blank");
+            }}
+          ></GenericButton>
         </div>
       </div>
     </div>

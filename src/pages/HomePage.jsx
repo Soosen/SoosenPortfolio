@@ -1,5 +1,4 @@
 import "./HomePage.css";
-import Window from "../components/Window";
 import NavBar from "../components/NavBar";
 import TopPageMainSecion from "../components/TopPageMainSection";
 
