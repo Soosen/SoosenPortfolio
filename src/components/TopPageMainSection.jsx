@@ -1,44 +1,50 @@
-import GenericButton from "./GenericButton";
-import "./TopPageMainSeciton.css";
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import GenericButton from "./GenericButton";
+import ColorfulBorder from "./ColorfulBorder";
+import "./TopPageMainSeciton.css";
 
 function TopPageMainSeciton() {
-  const [avatarRotation, setRotation] = useState(0); // State to manage rotation angle
-  const [avatarRotationSpeed, setRotationSpeed] = useState(1); // Speed of rotation in degrees per frame
+  let greenGlowColor = "#00ff00";
+  let blueGlowColor = "#00ffff";
+  const [glowColor, setGlowColor] = useState(greenGlowColor);
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Animation loop
-    const updateRotation = () => {
-      setRotation((prevRotation) => (prevRotation + avatarRotationSpeed) % 360);
-      requestAnimationFrame(updateRotation);
-    };
+    const timeout = setTimeout(() => {
+      const interval = setInterval(() => {
+        // Toggle between glow colors
+        setGlowColor((prevGlowColor) =>
+          prevGlowColor === greenGlowColor ? blueGlowColor : greenGlowColor
+        );
+      }, 3000); // Change every 3 seconds
 
-    requestAnimationFrame(updateRotation);
+      return () => clearInterval(interval);
+    }, 1500); // Start the interval after 1.5 seconds
 
-    // No cleanup function needed
-  }, [avatarRotationSpeed]);
+    return () => clearTimeout(timeout);
+  }, []); // Run effect only once on component mount
 
   return (
     <div className="FullPageView">
       <div className="MainSectionContainer">
         <div className="AvatarContainer">
-          <div
-            className="AvatarBorder"
-            style={{
-              background: `linear-gradient(${avatarRotation}deg,#8b00ff, #0022ff, #00c3ff, #00ff00)`,
-            }}
-          >
+          <ColorfulBorder className="AvatarBorder">
             <img
               src="src/assets/avatar.png"
               alt="avatar_picture"
               className="Avatar"
             />
-          </div>
+          </ColorfulBorder>
         </div>
         <div className="TitleContainer">
-          <h1>Hi, I am Soosen, an aspiring junior software developer.</h1>
+          <h1
+            style={{
+              textShadow: `0 0 10px ${glowColor}, 0 0 20px ${glowColor}`,
+            }}
+          >
+            Hi, I am Soosen, an aspiring junior software developer.
+          </h1>
         </div>
         <div className="DescriptionContainer">
           <h2>
@@ -52,19 +58,19 @@ function TopPageMainSeciton() {
             className="GenButton"
             name="Contact me"
             onClick={() => navigate(`/Contact`)}
-          ></GenericButton>
+          />
           <GenericButton
             className="GenButton"
             name="Download CV"
             onClick={() => navigate(`/Resume`)}
-          ></GenericButton>
+          />
           <GenericButton
             className="GenButton"
             name="GitHub"
             onClick={() => {
               window.open("https://github.com/Soosen", "_blank");
             }}
-          ></GenericButton>
+          />
         </div>
       </div>
     </div>

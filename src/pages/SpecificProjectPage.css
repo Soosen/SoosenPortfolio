@@ -1,0 +1,62 @@
+.MainSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.SpecificProjectBorder {
+    width: 60%;
+    height: 90%;
+    border-radius: 8px;
+}
+.ProjectTitleContainer{
+    border-radius: 8px 8px 0px 0px;
+    width: calc(100% - 16px);
+    height: 8%;
+    background-color: black;
+    margin: 8px 0px 0px 8px;
+    overflow: hidden;
+}
+.ProjectTitleContainer h1{
+    height: 60%;
+    text-align: center;
+    background: var(--green-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 200%;
+}
+.ProjectImageContainer{
+    width: calc(100% - 16px);
+    margin: 0px 8px 0px 8px;
+    height: 66%;
+    background-color: green;
+}
+
+.ProjectDescriptionContainer {
+    width: calc(100% - 16px);
+    height: 24%;
+    background-color: black;
+    margin: 0px 0px 0px 8px;
+    border-radius: 0px 0px 8px 8px;
+}
+
+.ProjectDescriptionContainer h2{
+    color: wheat;
+    padding: 3%;
+    text-align: center;
+    margin: 0px;
+    background: var(--green-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+}
+
+.SpecificProjectMultimedia{
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+}
+
+.Clickable {
+    cursor: pointer;
+}

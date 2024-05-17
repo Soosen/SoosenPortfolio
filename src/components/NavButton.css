@@ -13,6 +13,7 @@
     background: var(--purple-gradient);
     -webkit-background-clip: text;
     background-clip: text;
+    font-size: 100%;
 }
 
 

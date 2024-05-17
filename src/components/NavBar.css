@@ -16,6 +16,8 @@
   align-items: center;
   padding-left: 3%;
   cursor: pointer;
+  min-width: 349px;
+  min-height: 75px;
 }
 
 .LogoRight {
@@ -38,4 +40,6 @@
   float: right;
   display: flex;
   justify-content: space-evenly;
+  min-width: 420px;
+  min-height: 75px;
 }
