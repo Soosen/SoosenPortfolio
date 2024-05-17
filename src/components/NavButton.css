@@ -6,3 +6,17 @@
   font-size: 200%;
   font-weight: bold;
 }
+
+.ButtonText{
+  color: transparent;
+    background: var(--purple-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+
+.NavButton:hover .ButtonText {
+      background: var(--green-gradient);
+      -webkit-background-clip: text;
+        background-clip: text;
+}

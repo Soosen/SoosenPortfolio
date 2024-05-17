@@ -32,7 +32,7 @@ function TopPageMainSecion() {
             className="GenButton"
             name="Download CV"
           ></GenericButton>
-          <GenericButton className="GenButton" name="Github"></GenericButton>
+          <GenericButton className="GenButton" name="GitHub"></GenericButton>
         </div>
       </div>
     </div>

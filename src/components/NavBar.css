@@ -8,7 +8,6 @@
 }
 
 .Logo {
-  color: white;
   font-size: 200%;
   height: 100%;
   width: 30%;
@@ -19,7 +18,17 @@
 }
 
 .LogoRight {
-  color: #206bcc;
+  background: var(--purple-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.LogoLeft {
+  background: var(--green-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .NavButtonsContainer {
