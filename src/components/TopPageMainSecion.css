@@ -1,0 +1,71 @@
+.FullPageView {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+.MainSectionContainer {
+    margin-top: 10%;
+    height: 70%;
+    width: 80%;
+}
+
+.AvatarContainer {
+    height: 16%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.TitleContainer {
+    height: auto;
+    width: 100%;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.TitleContainer h1{
+    width: 80%;
+    background: linear-gradient(90deg, #00ff00, #00ffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.DescriptionContainer {
+    height: auto;
+    width: 100%;
+    font-size: 20px;
+    display: flex;
+}
+
+.DescriptionContainer h2{
+    background: linear-gradient(90deg, #8A2BE2, #FF00FF);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+}
+
+.ButtonsContainer {
+    height: 15%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.Avatar{
+    height: 100%;
+    border-radius: 50%;
+}
+
+.Border {
+    height: 100%;
+    width: calc(height * 1.7778);
+}
+

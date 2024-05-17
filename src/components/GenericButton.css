@@ -1,0 +1,32 @@
+.Border {
+    background: transparent;
+    width: 25%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.ButtonContainer {
+    width: calc(100% - 8px);
+    height: calc(100% - 8px);
+}
+
+.Button {
+    width: 100%;
+    height: 100%;
+    border: none;
+    font-size: 150%;
+    border-radius: 8px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    background: linear-gradient(90deg, #ff3b3b, #ff8c00);
+    border: none;
+    padding: 10px 20px;
+    /* Adjust padding to control button size */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    /* Add transition for smooth effect */
+}
