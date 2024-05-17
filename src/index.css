@@ -2,8 +2,7 @@
   height: 100%;
   font-family: 'DM Sans', sans-serif;
   --green-gradient: linear-gradient(90deg, #00ff00, #00ffff);
-  --purple-gradient: linear-gradient(90deg, #8A2BE2,
-      #FF00FF);
+  --purple-gradient: linear-gradient(90deg, #8A2BE2, #ff1188);
   --orange-gradient: linear-gradient(90deg, #ff3b3b, #ff8c00);
 }
 body {

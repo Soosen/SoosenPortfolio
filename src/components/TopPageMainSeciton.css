@@ -21,6 +21,16 @@
     justify-content: center;
 }
 
+.AvatarBorder {
+    height: 100%;
+    width: height;
+    display: flex;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+}
+
 .TitleContainer {
     height: auto;
     width: 100%;
@@ -52,7 +62,8 @@
 }
 
 .ButtonsContainer {
-    height: 15%;
+    margin-top: 3%;
+    height: 12%;
     width: 100%;
     display: flex;
     align-items: center;
@@ -60,7 +71,8 @@
 }
 
 .Avatar{
-    height: 100%;
+    height: calc(100% - 8px);
+    width: calc(100% - 8px);
     border-radius: 50%;
 }
 
