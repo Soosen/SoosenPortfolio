@@ -11,19 +11,15 @@ function TopPageMainSeciton() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const timeout = setTimeout(() => {
-      const interval = setInterval(() => {
-        // Toggle between glow colors
-        setGlowColor((prevGlowColor) =>
-          prevGlowColor === greenGlowColor ? blueGlowColor : greenGlowColor
-        );
-      }, 3000); // Change every 3 seconds
+    const interval = setInterval(() => {
+      // Toggle between glow colors
+      setGlowColor((prevGlowColor) =>
+        prevGlowColor === greenGlowColor ? blueGlowColor : greenGlowColor
+      );
+    }, 3000); // Change every 3 seconds
 
-      return () => clearInterval(interval);
-    }, 1500); // Start the interval after 1.5 seconds
-
-    return () => clearTimeout(timeout);
-  }, []); // Run effect only once on component mount
+    return () => clearInterval(interval);
+  }, 1500); // Start the interval after 1.5 seconds
 
   return (
     <div className="FullPageView">
@@ -61,8 +57,8 @@ function TopPageMainSeciton() {
           />
           <GenericButton
             className="GenButton"
-            name="Download CV"
-            onClick={() => navigate(`/Resume`)}
+            name="About Me"
+            onClick={() => navigate(`/AboutMe`)}
           />
           <GenericButton
             className="GenButton"

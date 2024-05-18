@@ -17,7 +17,7 @@ function NavBar() {
       </div>
       <div className="NavButtonsContainer">
         <NavButton className="NavButton" name="Projects"></NavButton>
-        <NavButton className="NavButton" name="Resume"></NavButton>
+        <NavButton className="NavButton" name="About Me"></NavButton>
         <NavButton className="NavButton" name="Contact"></NavButton>
       </div>
     </div>

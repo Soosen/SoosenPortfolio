@@ -1,0 +1,79 @@
+.AboutMeColorfulBorder {
+    width: 70%;
+    height: 80%;
+    border-radius: 8px;
+    display: flex;
+    font-size: 100%;
+    min-width: 1285px;
+    min-height: 750px;
+}
+
+.TextContainer {
+    width: calc(100% - 16px);
+    height: calc(100% - 16px);
+    margin: 8px;
+    background-color: black;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.TextContainer h1 {
+    text-align: center;
+    width: 90%;
+    background: var(--green-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.5;
+    /* Using a relative line-height */
+}
+
+.TextContainer a {
+    width: 90%;
+    background: var(--purple-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.TextContainer a:hover {
+    background: var(--orange-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+.FirstSentence {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 3s steps(50, end);
+}
+
+.RestText {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.Page.loaded .RestText {
+    opacity: 1;
+}
+
+
+@media (min-width: 1285px) and (min-height: 750px) {
+    .TextContainer h1 {
+        font-size: 2vw;
+    }
+}

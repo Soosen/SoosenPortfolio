@@ -5,7 +5,7 @@ import React, { useState } from "react";
 function NavButton(props) {
   const navigate = useNavigate();
   const handleOnClick = () => {
-    navigate(`/${props.name}`);
+    navigate(`/${props.name.replace(" ", "")}`);
   };
 
   return (
