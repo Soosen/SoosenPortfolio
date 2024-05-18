@@ -12,6 +12,7 @@
     margin-top: 10%;
     height: 70%;
     width: 80%;
+    opacity: 0;
 }
 
 .AvatarContainer {
@@ -94,5 +95,19 @@
 .Border {
     height: 100%;
     width: calc(height * 1.7778);
+}
+
+.fadeIn {
+    animation: fadeInAnimation 1s ease forwards;
+}
+
+@keyframes fadeInAnimation {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 

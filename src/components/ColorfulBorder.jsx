@@ -5,6 +5,7 @@ function ColorfulBorder({ className, children, onClick }) {
   const [bordersRotation, setRotation] = useState(0);
   const [bordersRotationSpeed, setBordersRotationSpeed] = useState(0.65);
   const [isHovered, setIsHovered] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     const updateRotation = () => {
@@ -15,6 +16,11 @@ function ColorfulBorder({ className, children, onClick }) {
     };
 
     requestAnimationFrame(updateRotation);
+
+    const timeoutId = setTimeout(() => {
+      setIsLoaded(true);
+    }, 100);
+    return () => clearTimeout(timeoutId);
   }, [bordersRotationSpeed]);
 
   const handleMouseEnter = () => {
@@ -27,7 +33,7 @@ function ColorfulBorder({ className, children, onClick }) {
 
   return (
     <div
-      className={`ColorfulBorder ${className}`}
+      className={`ColorfulBorder ${className} ${isLoaded ? "fadeIn" : ""}`}
       style={{
         background: isHovered
           ? `linear-gradient(${bordersRotation}deg, #FF0000, #FFA500, #FFFF00, #008000)`
