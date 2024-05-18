@@ -33,7 +33,7 @@ function ColorfulBorder({ className, children, onClick }) {
 
   return (
     <div
-      className={`ColorfulBorder ${className} ${isLoaded ? "fadeIn" : ""}`}
+      className={`ColorfulBorder ${className}`}
       style={{
         background: isHovered
           ? `linear-gradient(${bordersRotation}deg, #FF0000, #FFA500, #FFFF00, #008000)`
