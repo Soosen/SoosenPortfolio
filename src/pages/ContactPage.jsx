@@ -47,13 +47,13 @@ function ContactPage() {
             <ContactBox
               title="E-mail"
               details="mateusz.sosnowski.zg@gmail.com"
-              image="src/assets/email.png"
+              image="/assets/email.png"
               image_text="For business inquiries"
             ></ContactBox>
             <ContactBox
               title="Discord"
               details="Soosen"
-              image="src/assets/discord.png"
+              image="/assets/discord.png"
               image_text="For private inquiries"
             ></ContactBox>
           </div>

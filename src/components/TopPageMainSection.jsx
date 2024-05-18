@@ -6,21 +6,71 @@ import "./TopPageMainSection.css";
 
 function TopPageMainSection() {
   const navigate = useNavigate();
+  let greenGlowColor = "#00ff00";
+  let blueGlowColor = "#00ffff";
+  const [glowColor, setGlowColor] = useState(greenGlowColor);
+  const [avatarRotation, setRotation] = useState(0); // State to manage rotation angle
+  const [avatarRotationSpeed, setRotationSpeed] = useState(1); // Speed of rotation in degrees per frame
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      // Toggle between glow colors
+      setGlowColor((prevGlowColor) =>
+        prevGlowColor === greenGlowColor ? blueGlowColor : greenGlowColor
+      );
+    }, 3000); // Change every 3 seconds
+
+    return () => clearInterval(interval);
+  }, []); // Run effect only once on component mount
+
+  useEffect(() => {
+    // Animation loop
+    const updateRotation = () => {
+      setRotation((prevRotation) => (prevRotation + avatarRotationSpeed) % 360);
+      requestAnimationFrame(updateRotation);
+    };
+
+    requestAnimationFrame(updateRotation);
+
+    // No cleanup function needed
+  }, [avatarRotationSpeed]);
+
+  useEffect(() => {
+    const titleContainer = document.querySelector(".TitleContainer");
+    const handleAnimationEnd = () => {
+      titleContainer.classList.add("glow");
+    };
+    titleContainer.addEventListener("animationend", handleAnimationEnd);
+
+    return () => {
+      titleContainer.removeEventListener("animationend", handleAnimationEnd);
+    };
+  }, []);
 
   return (
     <div className="FullPageView">
       <div className="MainSectionContainer fadeIn">
         <div className="AvatarContainer">
-          <ColorfulBorder className="AvatarBorder">
+          <div
+            className="AvatarBorder"
+            style={{
+              background: `linear-gradient(${avatarRotation}deg, #8b00ff, #0022ff, #00c3ff, #00ff00)`,
+            }}
+          >
             <img
-              src="src/assets/avatar.png"
+              src="/assets/avatar.png"
               alt="avatar_picture"
               className="Avatar"
             />
-          </ColorfulBorder>
+          </div>
         </div>
         <div className="TitleContainer fadeIn">
-          <h1 className="Title">
+          <h1
+            className="Title"
+            style={{
+              textShadow: `0 0 10px ${glowColor}, 0 0 20px ${glowColor}`,
+            }}
+          >
             Hi, I am Soosen, an aspiring junior software developer.
           </h1>
         </div>
