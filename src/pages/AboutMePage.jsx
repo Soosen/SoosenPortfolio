@@ -7,10 +7,9 @@ function AboutMePage() {
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    // Simulate typing effect
     const typingTimeout = setTimeout(() => {
       setLoaded(true);
-    }, 2000); // Adjust the duration as needed
+    }, 2000);
 
     return () => clearTimeout(typingTimeout);
   }, []);

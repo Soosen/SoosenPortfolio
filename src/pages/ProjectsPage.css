@@ -4,10 +4,8 @@
     height: 90%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    /* Two columns with equal width */
     grid-gap: 20px;
     padding: 20px;
-    /* Gap between grid items */
 }
 
 .MainSection{

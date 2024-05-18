@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: center;
     border-radius: 8px;
-    overflow: hidden; /* Ensures gradient doesn't overflow */
+    overflow: hidden; 
 }
 
 .ButtonContainer {
@@ -24,7 +24,6 @@
     color: rgb(255, 255, 255);
     background: var(--orange-gradient);
     border: none;
-    padding: 10px 20px; /* Adjust padding to control button size */
-    cursor: pointer;
-    transition: background-color 0.3s ease; /* Add transition for smooth effect */
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
 }

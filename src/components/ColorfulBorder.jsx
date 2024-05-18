@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import "./ColorfulBorder.css";
 
 function ColorfulBorder({ className, children, onClick }) {
-  // Accept onClick as prop
-  const [bordersRotation, setRotation] = useState(0); // State to manage rotation angle
-  const [bordersRotationSpeed, setBordersRotationSpeed] = useState(0.65); // Speed of rotation in degrees per frame
+  const [bordersRotation, setRotation] = useState(0);
+  const [bordersRotationSpeed, setBordersRotationSpeed] = useState(0.65);
+  const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
     const updateRotation = () => {
@@ -15,17 +15,27 @@ function ColorfulBorder({ className, children, onClick }) {
     };
 
     requestAnimationFrame(updateRotation);
-
-    // No cleanup function needed
   }, [bordersRotationSpeed]);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
 
   return (
     <div
       className={`ColorfulBorder ${className}`}
       style={{
-        background: `linear-gradient(${bordersRotation}deg,#8b00ff, #0022ff, #00c3ff, #00ff00)`,
+        background: isHovered
+          ? `linear-gradient(${bordersRotation}deg, #FF0000, #FFA500, #FFFF00, #008000)`
+          : `linear-gradient(${bordersRotation}deg, #8b00ff, #0022ff, #00c3ff, #00ff00)`,
       }}
-      onClick={onClick} // Pass onClick prop to the div
+      onClick={onClick}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
       {children}
     </div>

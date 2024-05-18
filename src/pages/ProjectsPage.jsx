@@ -1,7 +1,7 @@
 import "./ProjectsPage.css";
 import NavBar from "../components/NavBar";
 import ProjectItem from "../components/ProjectItem";
-import projects from "/src/data/projects"; // Import the projects data
+import projects from "/src/data/projects";
 
 function ProjectsPage() {
   return (

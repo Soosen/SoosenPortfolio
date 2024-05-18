@@ -12,14 +12,13 @@ function TopPageMainSeciton() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      // Toggle between glow colors
       setGlowColor((prevGlowColor) =>
         prevGlowColor === greenGlowColor ? blueGlowColor : greenGlowColor
       );
-    }, 3000); // Change every 3 seconds
+    }, 3000);
 
     return () => clearInterval(interval);
-  }, 1500); // Start the interval after 1.5 seconds
+  }, 1500);
 
   return (
     <div className="FullPageView">

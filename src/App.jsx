@@ -4,7 +4,7 @@ import ProjectsPage from "./pages/ProjectsPage";
 import AboutMePage from "./pages/AboutMePage";
 import ContactPage from "./pages/ContactPage";
 import SpecificProjectPage from "./pages/SpecificProjectPage";
-import projects from "./data/projects"; // Import the projects data
+import projects from "./data/projects";
 
 function App() {
   return (

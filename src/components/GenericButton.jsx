@@ -1,35 +1,30 @@
 import React, { useState, useEffect } from "react";
-import "./GenericButton.css"; // Import the CSS file for styles
+import "./GenericButton.css";
 
 function GenericButton(props) {
-  const [isHovered, setIsHovered] = useState(false); // State to track hover state
-  const [rotation, setRotation] = useState(0); // State to manage rotation angle
-  const [rotationSpeed, setRotationSpeed] = useState(0.5); // Speed of rotation in degrees per frame
-  let animationId; // Variable to store animation frame ID
+  const [isHovered, setIsHovered] = useState(false);
+  const [rotation, setRotation] = useState(0);
+  const [rotationSpeed, setRotationSpeed] = useState(0.5);
+  let animationId;
 
-  // Function to handle mouse enter event
   const handleMouseEnter = () => {
     setIsHovered(true);
     startRotationAnimation();
   };
 
-  // Function to handle mouse leave event
   const handleMouseLeave = () => {
     setIsHovered(false);
     stopRotationAnimation();
   };
 
-  // Function to start rotation animation
   const startRotationAnimation = () => {
     animationId = requestAnimationFrame(updateRotation);
   };
 
-  // Function to stop rotation animation
   const stopRotationAnimation = () => {
     cancelAnimationFrame(animationId);
   };
 
-  // Update rotation angle every frame
   const updateRotation = () => {
     if (rotationSpeed !== 0) {
       setRotation((prevRotation) => (prevRotation + rotationSpeed) % 360);
@@ -37,7 +32,6 @@ function GenericButton(props) {
     animationId = requestAnimationFrame(updateRotation);
   };
 
-  // Clean up animation frame when component unmounts
   useEffect(() => {
     return () => {
       cancelAnimationFrame(animationId);
