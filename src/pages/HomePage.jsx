@@ -10,20 +10,15 @@ function HomePage() {
     const userAgent = navigator.userAgent;
     const mobileDevices =
       /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
-
     setIsMobile(mobileDevices.test(userAgent));
   }, []);
 
   return (
     <div className="Page">
-      <NavBar />
-      {isMobile ? (
-        <div className="MobileMessage">Mobile view in progress</div>
-      ) : (
-        <div className="MainSection">
-          <TopPageMainSection />
-        </div>
-      )}
+      {!isMobile && <NavBar />}
+      <div className="MainSection">
+        <TopPageMainSection isMobile={isMobile} />
+      </div>
     </div>
   );
 }

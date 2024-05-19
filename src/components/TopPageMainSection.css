@@ -112,3 +112,18 @@
     }
 }
 
+.Page .MobileMessage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.MobileMessage h1 {
+    background: var(--green-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-animation: neonGlow 1.5s ease-in-out infinite alternate;
+        animation: neonGlow 1.5s ease-in-out infinite alternate;
+}
