@@ -3,9 +3,9 @@
     height: 80%;
     border-radius: 8px;
     display: flex;
-    font-size: 100%;
-    min-width: 1285px;
-    min-height: 750px;
+    font-size: 1vw;
+    /* min-width: 1285px;
+    min-height: 750px; */
 }
 
 .TextContainer {
@@ -71,8 +71,8 @@
 }
 
 
-@media (min-width: 1285px) and (min-height: 750px) {
+/* @media (min-width: 1285px) and (min-height: 750px) {
     .TextContainer h1 {
         font-size: 2vw;
     }
-}
+} */

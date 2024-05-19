@@ -3,10 +3,10 @@
   background: black;
   border: none;
   color: #206bcc;
-  font-size: 200%;
+  font-size: 2vw;
   font-weight: bold;
   cursor: pointer;
-  min-width: 160px;
+  min-width: 60px;
 }
 
 .ButtonText{
@@ -14,7 +14,7 @@
     background: var(--purple-gradient);
     -webkit-background-clip: text;
     background-clip: text;
-    font-size: 100%;
+    font-size: 2vw;
 }
 
 

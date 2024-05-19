@@ -9,30 +9,26 @@ function TopPageMainSection() {
   let greenGlowColor = "#00ff00";
   let blueGlowColor = "#00ffff";
   const [glowColor, setGlowColor] = useState(greenGlowColor);
-  const [avatarRotation, setRotation] = useState(0); // State to manage rotation angle
-  const [avatarRotationSpeed, setRotationSpeed] = useState(1); // Speed of rotation in degrees per frame
+  const [avatarRotation, setRotation] = useState(0);
+  const [avatarRotationSpeed, setRotationSpeed] = useState(1);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      // Toggle between glow colors
       setGlowColor((prevGlowColor) =>
         prevGlowColor === greenGlowColor ? blueGlowColor : greenGlowColor
       );
-    }, 3000); // Change every 3 seconds
+    }, 3000);
 
     return () => clearInterval(interval);
-  }, []); // Run effect only once on component mount
+  }, []);
 
   useEffect(() => {
-    // Animation loop
     const updateRotation = () => {
       setRotation((prevRotation) => (prevRotation + avatarRotationSpeed) % 360);
       requestAnimationFrame(updateRotation);
     };
 
     requestAnimationFrame(updateRotation);
-
-    // No cleanup function needed
   }, [avatarRotationSpeed]);
 
   useEffect(() => {
