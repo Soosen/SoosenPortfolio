@@ -27,3 +27,11 @@
     padding: 10px 20px;
     transition: background-color 0.3s ease;
 }
+
+.MobileView .Border{
+    width: 33%;
+}
+
+.MobileView .Button{
+    font-size: 1.75vh;
+}

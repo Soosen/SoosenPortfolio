@@ -20,7 +20,7 @@ function ProjectItem(props) {
         />
       </div>
       <div className="DescriptionContainer">
-        <h1>{props.project.title}</h1>
+        <h1 className="ProjectDescription">{props.project.title}</h1>
       </div>
     </ColorfulBorder>
   );

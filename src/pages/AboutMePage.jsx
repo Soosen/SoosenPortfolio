@@ -4,6 +4,15 @@ import ColorfulBorder from "../components/ColorfulBorder";
 import { useEffect, useState } from "react";
 
 function AboutMePage() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const userAgent = navigator.userAgent;
+    const mobileDevices =
+      /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
+    setIsMobile(mobileDevices.test(userAgent));
+  }, []);
+
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
@@ -15,13 +24,17 @@ function AboutMePage() {
   }, []);
 
   return (
-    <div className={`Page ${loaded ? "loaded" : ""}`}>
+    <div
+      className={`Page ${loaded ? "loaded" : ""} ${
+        isMobile ? "MobileView" : ""
+      }`}
+    >
       <NavBar />
       <div className="MainSection">
         <ColorfulBorder className="AboutMeColorfulBorder">
           <div className="TextContainer">
             <h1 className="FirstSentence">
-              I am an aspiring junior software developer...
+              I am an aspiring software developer...
             </h1>
             <h1 className="RestText">
               Originally from Poland. At the age of 15, I moved to Germany. My

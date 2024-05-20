@@ -24,7 +24,7 @@
 
 .AvatarBorder {
     width: 8%;
-    height: width;
+    aspect-ratio: 1/1;
     display: flex;
     border-radius: 50%;
     justify-content: center;
@@ -126,4 +126,49 @@
     background-clip: text;
     -webkit-animation: neonGlow 1.5s ease-in-out infinite alternate;
         animation: neonGlow 1.5s ease-in-out infinite alternate;
+}
+
+.MobileView .MainSectionContainer{
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.MobileView .AvatarContainer {
+    height: 20%;
+    width: 100%;
+}
+
+.MobileView .AvatarContainer {
+    height: 20%;
+    width: auto;
+}
+
+.MobileView .AvatarBorder {
+    width:30%;
+    aspect-ratio: 1/1;
+}
+
+.MobileView .TitleContainer {
+    width: 100%;
+    height: 20%;   
+}
+
+.MobileView .Title{
+    font-size: 3vh;
+}
+
+.MobileView .DescriptionContainer{
+    height: 25%;
+    width: 100%;
+}
+
+.MobileView .Description {
+ font-size: 3vh;
+}
+
+.MobileView .ButtonsContainer {
+    height: 10%;
 }

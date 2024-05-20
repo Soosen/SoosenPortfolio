@@ -75,3 +75,38 @@
 .Clickable {
     cursor: pointer;
 }
+
+.MobileView .SpecificProjectBorder{
+    width: 90%;
+}
+
+.MobileView .ProjectTitleContainer{
+    height: 15%;
+    width: calc(100% - 8px);
+    margin-top: 4px;
+    margin-left: 4px;
+}
+
+.MobileView .ProjectTitleContainer h1{
+    font-size: 4.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.MobileView .ProjectImageContainer{
+    height: 50%;
+    width: calc(100% - 8px);
+    margin-left: 4px;
+}
+
+.MobileView .ProjectDescriptionContainer {
+    height: calc(35% - 8px);
+    width: calc(100% - 8px);
+    margin-left: 4px;
+}
+
+.MobileView .ProjectDescriptionContainer h2{
+
+    font-size: 2.0vh;
+}

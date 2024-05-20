@@ -8,7 +8,17 @@
     padding: 20px;
 }
 
-.MainSection{
-    /* min-width: 1075px;
-    min-height: 850px; */
+.MobileView .ProjectsContainer{
+    grid-template-columns: repeat(1, 1fr);
+    height: 100%;
+    grid-gap: 5vh;
+}
+
+.MobileView .ProjectsPageMainSection{
+    height: 300vh;;
+}
+
+.MobileView .ProjectItem{
+    width: 100%;
+    aspect-ratio: 1/1;
 }

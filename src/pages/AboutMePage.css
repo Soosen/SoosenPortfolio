@@ -70,9 +70,16 @@
     opacity: 1;
 }
 
+.MobileView .AboutMeColorfulBorder{
+    width: 90%;
+    height: 90%;
+}
 
-/* @media (min-width: 1285px) and (min-height: 750px) {
-    .TextContainer h1 {
-        font-size: 2vw;
-    }
-} */
+.MobileView .TextContainer{
+    height: calc(100% - 8px);
+    width: calc(100% - 8px);
+    margin-top: 4px;
+    margin-left: 4px;
+    margin-right: 4px;
+    font-size: 1.25vh;
+}

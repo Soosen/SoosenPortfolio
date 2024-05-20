@@ -22,3 +22,11 @@
       -webkit-background-clip: text;
         background-clip: text;
 }
+
+.MobileView .NavButton {
+  width: 100%;
+}
+
+.MobileView .ButtonText{
+  font-size: 2vh;
+}

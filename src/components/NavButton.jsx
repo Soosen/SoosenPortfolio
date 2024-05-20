@@ -9,7 +9,10 @@ function NavButton(props) {
   };
 
   return (
-    <button className="NavButton" onClick={handleOnClick}>
+    <button
+      className={`NavButton ${props.isMobile ? "MobileView" : ""}`}
+      onClick={handleOnClick}
+    >
       <div className="ButtonText">{props.name}</div>
     </button>
   );

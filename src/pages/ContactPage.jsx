@@ -9,6 +9,15 @@ function ContactPage() {
   const [dotCount, setDotCount] = useState(0);
   const maxDotCount = 3;
 
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const userAgent = navigator.userAgent;
+    const mobileDevices =
+      /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
+    setIsMobile(mobileDevices.test(userAgent));
+  }, []);
+
   useEffect(() => {
     let currentIndex = 0;
     const typingInterval = setInterval(() => {
@@ -33,7 +42,7 @@ function ContactPage() {
   };
 
   return (
-    <div className="Page">
+    <div className={`Page ${isMobile ? "MobileView" : ""}`}>
       <NavBar />
       <div className="MainSection">
         <div className="Content">

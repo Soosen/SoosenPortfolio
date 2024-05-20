@@ -40,6 +40,26 @@
   float: right;
   display: flex;
   justify-content: space-evenly;
-  /* min-width: 420px;
-  min-height: 75px; */
+}
+
+.MobileView .NavBar{
+  height: 10%;
+}
+
+.MobileView .Logo {
+  height: 100%;
+  width: 40%;
+}
+
+.MobileView .LogoContainer {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5vh;
+}
+
+.MobileView .NavButtonsContainer {
+  width: 60%;
 }

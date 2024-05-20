@@ -14,10 +14,10 @@ function HomePage() {
   }, []);
 
   return (
-    <div className="Page">
-      {!isMobile && <NavBar />}
+    <div className={`Page ${isMobile ? "MobileView" : ""}`}>
+      <NavBar />
       <div className="MainSection">
-        <TopPageMainSection isMobile={isMobile} />
+        <TopPageMainSection />
       </div>
     </div>
   );

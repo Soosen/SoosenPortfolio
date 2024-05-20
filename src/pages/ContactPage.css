@@ -37,4 +37,22 @@
 }
 
 
+.MobileView .Content{
+    width: 90%;
+    height: 100%;
+}
+
+.MobileView .TopLayer{
+    height: 10%;
+}
+
+.MobileView .TopLayer h1{
+    font-size: 4vh;
+    width: 100%;
+}
+
+.MobileView .BottomLayer {
+    flex-direction: column;
+    gap: 3vh;
+}
 
