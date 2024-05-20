@@ -34,7 +34,9 @@ function AboutMePage() {
         <ColorfulBorder className="AboutMeColorfulBorder">
           <div className="TextContainer">
             <h1 className="FirstSentence">
-              I am an aspiring software developer...
+              {!isMobile
+                ? "I am an aspiring junior software developer..."
+                : "I am an aspiring developer..."}
             </h1>
             <h1 className="RestText">
               Originally from Poland. At the age of 15, I moved to Germany. My
